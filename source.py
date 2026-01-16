@@ -45,7 +45,7 @@ def savedetails(
         con = sqlite3.connect("senroll.db")
         cur = con.cursor()
 
-        # Create table if not exists
+      
         cur.execute("""
             CREATE TABLE IF NOT EXISTS ens (
                 name TEXT,
@@ -116,3 +116,4 @@ def data_response():
         })
 
     return JSONResponse(content={"students": students})
+
